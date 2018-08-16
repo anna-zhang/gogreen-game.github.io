@@ -1,0 +1,405 @@
+body {
+  height: 100vh;
+  margin-top: 30px;
+  background: #649173; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #649173, #dbd5a4); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #649173, #dbd5a4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow: hidden;
+}
+
+#gameScreen button {
+  padding: 5px;
+  text-align: center;
+  color: black;
+  font-family: 'Aldrich', sans-serif;
+  background: white;
+}
+
+#gameChoice button {
+  text-align: center;
+  padding: 5px;
+  color: black;
+  font-family: 'Aldrich', sans-serif;
+  background: white;
+}
+
+#resourceScreen button {
+  padding: 5px;
+  text-align: center;
+  color: black;
+  font-family: 'Aldrich', sans-serif;
+  background: white;
+}
+
+ul{
+  list-style-type: none;
+  width: 89%;
+  margin-left: 40px;
+  margin-right: auto;
+}
+
+#emoji {
+  margin: auto;
+  padding: 20px;
+}
+
+#mythScreen button {
+  padding: 5px;
+  text-align: center;
+  color: black;
+  font-family: 'Aldrich', sans-serif;
+  background: white;
+}
+
+button {
+  text-align: center;
+  padding: 5px;
+  color: black;
+  font-family: 'Aldrich', sans-serif;
+  background: white;
+}
+
+#startScreen p {
+  text-align: center;
+  color: white;
+  font-family: 'Aldrich', sans-serif;
+}
+
+.fa {
+  padding: 5px;
+  font-size: 10px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+#whatToCollect {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  padding-top: 5;
+
+}
+
+#mythScreen {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  padding-top: 5;
+
+}
+
+#learnMoreScreen {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  padding-top: 5;
+
+}
+
+#tweetScreen {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  padding-top: 5;
+
+}
+
+#whatToCollect h1 {
+  font-size: 20px;
+
+}
+
+#down{
+  margin-top: 10%;
+}
+
+
+#down2{
+  bottom: 10px;
+}
+
+#arrowright{
+  right: 100px;
+  font-size:100px;
+  position: absolute;
+  top: 400px;
+}
+
+#arrowLeft{
+  left: 100px;
+  font-size:100px;
+  position: absolute;
+  top: 400px;
+}
+
+
+#startScreen {
+  margin: auto;
+  margin-top: 30px;
+  position: relative;
+  width: 600px;
+  height: 600px;
+  color: black;
+  text-align: center;
+  font-family: 'Aldrich', sans-serif;
+}
+
+
+@keyframes boom {
+  100% {
+    transform: rotate(1080deg) scale(1);
+  }
+}
+
+#startScreen h1 {
+  position:absolute;
+  text-align:center;
+  width: 100%;
+  color: white;
+  font-size: 40px;
+  text-shadow: 0 1px 2px;
+  animation: pulse 6s linear infinite;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#startScreen h2 {
+  position:absolute;
+  text-align:center;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  text-shadow: 0 1px 2px;
+  font-family: 'Aldrich', sans-serif;
+}
+
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* #randomfact p {
+  padding: 100px;
+} */
+
+#startScreen p {
+  font-weight: bold;
+  font-family: 'Aldrich', sans-serif;
+  position: absolute;
+  top: 300px;
+  left: 180px;
+}
+
+#startScreen span {
+  position: relative;
+  font-size: 40px;
+  animation: up 2s linear infinite;
+  animation-delay: 3s;
+  position: absolute;
+  top:110px;
+  left: 90px;
+}
+
+/* second */
+
+#secondscreen {
+  height: 600px;
+  font-size: 40px;
+  color: black;
+  text-align: center;
+  font-family: 'Aldrich', sans-serif;
+}
+
+@keyframes boom {
+  100% {
+    transform: rotate(1080deg) scale(1);
+  }
+}
+
+
+/* #startScreen div {
+  height: 100%;
+}
+#secondscreen div {
+  height: 100%;
+}
+#thirdscreen div {
+  height: 100%;
+} */
+
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+#secondscreen p {
+  position:absolute;
+  width: 100%;
+  color: #222;
+  font-size: 40px;
+  text-shadow: 0 1px 2px;
+  /* animation: pulse 6s linear infinite; */
+  font-family: 'Aldrich', sans-serif;
+}
+
+@keyframes slide {
+    0% { left: -150%; }
+    35% { left: 50%; }
+    65% { left: 50%; }
+    100% { left: 150%; }
+}
+
+/* third */
+
+#thirdscreen {
+  height: 600px;
+  color: black;
+  text-align: center;
+  font-family: 'Aldrich', sans-serif;
+  font-size: 40px;
+}
+
+@keyframes boom {
+  100% {
+    transform: rotate(1080deg) scale(1);
+  }
+}
+
+
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+
+#thirdscreen p {
+  position:absolute;
+  width: 100%;
+  color: #222;
+  font-size: 40px;
+  text-shadow: 0 1px 2px;
+  font-family: 'Aldrich', sans-serif;
+}
+
+ /* fourth */
+ #fourthscreen p {
+   position:absolute;
+   width: 100%;
+   color: #222;
+   font-size: 40px;
+   text-shadow: 0 1px 2px;
+   font-family: 'Aldrich', sans-serif;
+ }
+
+body {
+  font-family: "Consolas", Geneva, sans-serif;
+  text-align: center;
+}
+
+canvas{
+  margin: 40px;
+}
+
+/* fifth */
+#fifthscreen p {
+  position:absolute;
+  width: 100%;
+  color: #222;
+  font-size: 30px;
+  text-shadow: 0 1px 2px;
+  font-family: 'Aldrich', sans-serif;
+}
+
+#gamescreen {
+  font-family: 'Aldrich', sans-serif;
+  text-align: center;
+}
+
+
+@keyframes slide_f {
+0% { left: -150%; }
+35% { left: 1%; }
+65% { left: 1%; }
+100% { left: 1%; }
+}
+
+th, td {
+    padding: 15px;
+}
+
+#mythScreen img {
+  animation: pulse 6s linear infinite;
+}
+
+
+canvas {
+    margin: 0px;
+}
+
+#ruleScreen h1 {
+  text-align:center;
+  width: 100%;
+  color: white;
+  font-size: 40px;
+  text-shadow: 0 1px 2px;
+  animation: pulse 6s linear infinite;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+#ruleScreen h2 {
+  position:absolute;
+  text-align:center;
+  width: 100%;
+  color: black;
+  font-size: 40px;
+  text-shadow: 0 1px 2px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+#textBox {
+    width: 300px;
+    border: 10px solid black;
+    padding: 25px;
+    margin-left: 575px;
+}
+
+#bottomDiv {
+  /* width: 50%;
+  margin-left: 33%; */
+}
+
+.menuBottom{
+  margin-top: 30px;
+  margin: auto;
+  float: center;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  padding-left: auto;
+  width: 100%;
+}

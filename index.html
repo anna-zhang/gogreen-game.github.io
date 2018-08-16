@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
+  <link rel = "stylesheet" type = "text/css" href = "style.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title> Go Green </title>
+
+</head>
+
+
+<body onload = "start()" onkeydown="switchScreen(event)">
+
+  <div id = "startScreen">
+    <h1> GO GREEN </h1>
+    <img src="Images/tree-start-screen.png" id="tree1" height="400" width="">
+    <img src="Images/tree-start-screen.png" id="tree1" height="400" width="">
+    <h2> Click the right arrow to get started. </h2>
+    <p>  </p>
+  </div>
+
+  <div id="secondScreen">
+      <p>Each year, the world generates 1.3 billion tons of waste.</p>
+      <img id= "trash2" src="Images/waste-garbage.png" height="250" width="">
+      <p>That's expected to soar to 4 billion tons by 2100. </p>
+  </div>
+
+  <div id="thirdScreen" >
+    <p>We have to protect the world that we live in.</p>
+    <img src="Images/earth-spinning-rotating-animation-24.gif" id="spinning-globe" height="250" width="">
+    <p>Simple actions can make a difference. <br>
+      Let's be eco-friendly!</p>
+  </div>
+
+
+  <div id="fourthScreen">
+    </p>We hope that this game shows you how you can be part of a cleaner world.</p>
+    <img src="Images/tree-grow.gif" id="tree-growth" height="250" width="">
+    <p>Let's get started!</p>
+  </div>
+
+  <div id="ruleScreen">
+    <div id = "textBox">
+    <p  style = "font-size: 150%;">RULES:</p>
+      <p style = "text-align: left; line-height: 25px">
+          <br>
+            1. Use the 'A' button to move the bin left and the 'D' button to move the bin right in order to catch the correct items.
+          <br>
+          <br>
+            2. For every correct item you collect, your score will increase by 10 points.
+          <br>
+          <br>
+            3. For every incorrect item you collect, your score will decrease by 10 points.
+          <br>
+          <br>
+            It's time to put your knowledge to the test!
+          </p>
+      </div>
+      <br>
+    <h1 style = "font-size: 200%;">
+            READY?
+    </h1>
+  </div>
+
+  <div id="whatToCollect" >
+    <h1>WHAT TO COLLECT:</h1>
+    <br>
+    <h1>COMPOST</h1>
+    <p>In the compost game, you should collect the below items.</p>
+    <table width="400" border="0" cellpadding="5" align="center">
+    <tr>
+    <td align="center" valign="center">
+      <img src="Images/apple.png" alt="apple" height="80" width=""/>
+    <br />
+    Apples
+    </td>
+    <td align="center" valign="center">
+      <img src="Images/cracked-egg-hi.png" alt="egg shells" height="80" width=""/>
+    <br />
+    Egg Shells
+    </td>
+    </tr>
+    </table>
+    <p>You can also compost old teabags, coffee grinds and the filters, stale cereal, old fruit, and stripes of cardboard. You should wait for at least two weeks for the compost to be ready; it can be used to fertilize the plants in your garden. Don't have a garden? That's okay! You can donate your compost to community gardens, local farms, or a Curbside Compost Service.</p>
+
+    <br>
+    <h1>RECYCLE</h1>
+    <p>In the recycle game, you should collect the below items.</p>
+    <table width="400" border="0" cellpadding="5" align="center">
+    <tr>
+    <td align="center" valign="center">
+      <img src="Images/green-soda-can.png" alt="soda can" height="80" width=""/>
+    <br />
+    Aluminum Cans
+    </td>
+    <td align="center" valign="center">
+      <img src="Images/newspaper.png" alt="newspaper" height="80" width=""/>
+    <br />
+    Newspaper
+    </td>
+    </tr>
+    </table>
+    <p>You can recycle many things like plastic and glass bottles along with aluminum cans and paper. If you are unsure about whether you can recycle it or not, look at the label for a recycling sign that typically has a number within it. If you see this sign, you can recycle it. You can even save five cents by recycling your plastic and glass bottles as well as your aluminum cans in a nearby grocery store!</p>
+  </div>
+
+
+  <div id="gameChoice">
+    <img src="Images/plants-dancing.gif" id="plants-dancing" height="250" width="">
+    <p  style = "font-size: 150%;">CHOOSE A GAME:</p>
+    <h2><button name="subject" type="submit" onclick = "goToGame('recycle')">Recycle</button></h2>
+    <h3><button name="subject" type="submit" onclick = "goToGame('compost')">Compost</button></h3>
+  </div>
+
+  <div id="gameScreen">
+    <p>GAME</p>
+    <div id="scoreCounter">
+      SCORE: <span id="number"></span>
+      HIGH SCORE: <span id="highnumber"></span>
+       <div>TIME: <span id="time"></span></div>
+       <br>
+       <button onclick="startGame()">START GAME</button>
+    </div>
+    <br>
+    <audio id = "music" loop> <source src="Audio/game-music.mp3" type="audio/mpeg"> </audio>
+    <canvas id="myCanvas" width="375" height="500" style="border: 3px solid black;"></canvas>
+  </div>
+
+<div id = "mythScreen">
+  <h1>IT'S TIME TO BUST SOME MYTHS!</h1>
+  <br>
+  <img src="Images/did-you-know.png" id="myth-busted" height="250" width="">
+  <br>
+  <br>
+  <p id="random-fact"></p>
+  <br>
+  <div align = "center">
+    <button type = "button" onclick = "genRand()" align = 'center'>Get a new myth!</button>
+  </div>
+</div>
+
+<div id = "learnMoreScreen">
+  <h1>WHAT NEXT?</h1>
+      <p id = "intro"> The world needs to be informed of not only how to recycle better, but also how we can conserve on energy and more.
+        This video below not only gives some helpful tips in how to save the environment, but it also talks about why the Earth is becoming worse.
+      </p>
+      <br>
+      <p id = "video">
+        <iframe width="600" height="400" src="https://www.youtube.com/embed/BxKfpt70rLI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </p>
+</div>
+
+<div id = "resourceScreen">
+  <h1>LEARN MORE</h1>
+  <p>Discover a new resource.</p>
+
+<p id="random-resources"></p>
+<div align = "center">
+  <button type = "button" onclick = "work()" align = 'center'>Randomize!</button>
+</div>
+</div>
+
+<div id = "quizScreen">
+  <p>This is our quiz screen.</p>
+  <div id='container'>
+			<div id='title'>
+				<h1>QUIZ</h1>
+			</div>
+   			<br/>
+  			<div id='quiz'></div>
+    		<div class='button' id='next'><a href='#'>Next</a></div>
+    		<div class='button' id='prev'><a href='#'>Previous</a></div>
+    		<div class='button' id='start'> <a href='#'>Start Over</a></div>
+        <img id='emoji' style = "display: none;"> </img>
+        <!-- <button class='' id='next'>Next</a></button>
+    		<button class='' id='prev'>Prev</a></button>
+    		<button class='' id='start'> Start Over</a></button> -->
+    	</div>
+</div>
+
+<div id = "tweetScreen">
+      <h1>
+        TAKE ACTION
+      </h1>
+      <!-- ADDS THE TWEET BUTTON -->
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <p>USE YOUR VOICE FOR SOCIAL GOOD</p>
+      <br>
+
+      <p id = "intro">
+        Instead of using plastic bottles, you should use reusable bottles to save the environment.
+        <a class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text=Instead%20of%20using%20plastic%20bottles%20,%20you%20should%20use%20reusable%20bottles%20to%20save%20the%20environment%20.%20" target="_blank">
+          Click to tweet.</a>
+      </p>
+      <p id = "intro">
+        Instead of throwing away containers, reuse them for extra storage.
+        <a class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text=Instead%20of%20throwing%20away%20containers%20,%20reuse%20them%20for%20extra%20storage.%20" target="_blank">
+          Click to tweet.</a>
+      </p>
+      <p id = "intro">
+        Want a happy life... Have a happy earth.
+        <a class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text=What%20a%20happy%20life...%20Have%20a%20happy%20Earth.%20" target="_blank">
+          Click to tweet.</a>
+      </p>
+      <p id = "intro">
+        Remember to recycle and compost to have less trash.
+        <a class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text=Remember%20to%20recycle%20and%20compost%20to%20have%20less%20trash%20.%20" target="_blank">
+          Click to tweet.</a>
+      </p>
+      <p id = "intro">
+        The Earth needs your help. Please reycle and throw trash away properly.
+        <a class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text=The%20Earth%20needs%20your%20help%20.%20Please%20recycle%20and%20throw%20trash%20away%20properly%20.%20" target="_blank">
+          Click to tweet.</a>
+      </p>
+      <p id = "intro">
+        Sustainability is your best friend.
+        <a class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text=Sustainability%20is%20your%20best%20friend%20.%20" target="_blank">
+          Click to tweet.</a>
+      </p>
+      <p id = "intro">
+        Please don't litter. If you throw your trash away properly, then the environment and animals do not have to suffer.
+        <a class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text=Please%20do%20not%20litter%20.%20If%20you%20throw%20your%20trash%20away%20properly%20,%20then%20%20the%20environment%20and%20animals%20do%20not%20have%20to%20suffer%20.%20" target="_blank">
+          Click to tweet.</a>
+      </p>
+      <p id = "intro">
+        Many animals eat plastic thinking that it is food; however, plastic cannot be digested so it prevents the animals from eating when they have a full belly of plastic. In order to save the animals, please do not use plastic bags.
+        <a class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text=Many%20animals%20eat%20plastic%20thinking%20that%20it%20is%20food%20.%20However%20,%20plastic%20cannot%20be%20digested%20so%20it%20prevents%20the%20animals%20from%20eating%20when%20they%20have%20a%20full%20belly%20of%20plastic%20.%20In%20order%20to%20save%20the%20animals%20,%20please%20do%20not%20use%20plastic%20bags%20.%20" target="_blank">
+          Click to tweet.</a>
+      </p>
+      <p id = "intro">
+        When going to get coffee, bring your own reusable cup. Stop cups from going to landfills which hurts the environment and the animals.
+        <a class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text=When%20going%20to%20get%20coffee%20,%20bring%20your%20own%20reusable%20cup%20.%20Stop%20cups%20from%20going%20to%20landfills%20which%20hurts%20the%20environment%20and%20the%20animals%20.%20" target="_blank">
+          Click to tweet.</a>
+      </p>
+      <p id = "intro">
+        Be part of the change, not the problem.
+        <a class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text=Be%20part%20of%20the%20change,%20not%20the%20problem%20.%20" target="_blank">
+          Click to tweet.</a>
+      </p>
+      <p id = "intro">
+        Americans used about 390 million plastic straws every day and they are the 11th most found ocean trash. All of this cause 100,000 marine animals to die. Stop using plastic straws.
+        <a class="twitter-share-button"
+          href="https://twitter.com/intent/tweet?text=Americans%20used%20about%20390%20million%20plastic%20straws%20every%20day%20and%20they%20are%20the%2011th%20most%20found%20ocean%20trash%20.%20All%20of%20this%20causes%20100,000%20marine%20animals%20to%20die%20.%20Stop%20using%20plastic%20straws%20.%20" target="_blank">
+          Click to tweet.</a>
+    </div>
+
+<div id="endScreen">
+  <!-- <p>This is where our menu goes. It is not ready yet. Please be patient. The website is under maintenance.</p> -->
+  <img src="Images/plants-dancing.gif" id="plants-dancing" height="250" width="">
+  <p  style = "font-size: 150%;">MENU:</p>
+  <h2><button name="subject" type="submit" onclick = "goToScreen(6)">Play the Game</button></h2>
+  <h3><button name="subject" type="submit" onclick = "goToScreen(8)">Myth Page</button></h3>
+  <h3><button name="subject" type="submit" onclick = "goToScreen(12)">Take Action</button></h3>
+  <h3><button name="subject" type="submit" onclick = "goToScreen(11)">Quiz</button></h3>
+  <h3><button name="subject" type="submit" onclick = "goToScreen(0)">Return to Homepage</button></h3>
+</div>
+<footer>
+<div id = "bottomDiv">
+  <h2><button class="menuBottom" name="subject" type="submit" onclick = "goToScreen(13)">Go to Menu</button></h2>
+</div>
+</footer>
+
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyByEc1xyljo2DAboXDGAvhXe33YupASRX0",
+    authDomain: "go-green-gwc.firebaseapp.com",
+    databaseURL: "https://go-green-gwc.firebaseio.com",
+    projectId: "go-green-gwc",
+    storageBucket: "go-green-gwc.appspot.com",
+    messagingSenderId: "3826675989"
+  };
+  firebase.initializeApp(config);
+  </script>
+
+  <script src="ourgame.js"> </script>
+  <script src="workinggame.js"> </script>
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+  <script type='text/javascript' src='go-green-quiz.js'></script>
+
+</body>
+</html>
